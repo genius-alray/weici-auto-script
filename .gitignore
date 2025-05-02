@@ -1,0 +1,4 @@
+config.toml
+logs
+.vscode
+.venv
