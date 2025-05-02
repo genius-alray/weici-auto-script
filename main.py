@@ -390,13 +390,6 @@ class Automation:
                 continue
 
 
-# MAX_FAILS = 10
-
-
-class TooManyFails(Exception):
-    pass
-
-
 # 从配置文件创建自动化实例
 logger.info("开始创建自动化实例")
 for user_config in config["user"]:
