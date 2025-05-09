@@ -149,13 +149,10 @@ class Automation:
             if nickname != self.nickname:
                 logger.info("与目标账号不符，切换账号")
                 self.d.swipe_ext(Direction.FORWARD)
+                self.d.sleep(1)
                 self.d(text="更多").click()
-                self.click_queue(
-                    [
-                        "com.android.weici.senior.student:id/login_out",
-                        "com.android.weici.senior.student:id/positiveButton",
-                    ]
-                )
+                self.d(resourceId="com.android.weici.senior.student:id/login_out").click()
+                self.d(resourceId="com.android.weici.senior.student:id/positiveButton").click()
                 self.handle_login()
         self.click_by_resourceId("com.android.weici.senior.student:id/bottom_btn1")
         self.d(
@@ -376,18 +373,6 @@ class Automation:
             input("请手动完成，按任意键继续程序")
             # raise ValueError(error_msg)
 
-    def click_queue(self, resourceIds):
-        last = resourceIds[-1]
-        while True:
-            skip = False
-            for resourceId in resourceIds:
-                if self.d(resourceId=resourceId).click_exists():
-                    skip = True
-                    if resourceId == last:
-                        return
-                    break
-            if skip:
-                continue
 
 
 # 从配置文件创建自动化实例
