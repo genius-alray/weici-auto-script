@@ -1,4 +1,8 @@
 # 维词APP 自动化脚本
+
+> [!CAUTION] 暂停更新
+> 由于作者目前高中不再布置维词作业，此项目将暂停更新，如果您愿意维护这个项目，可通过email联系作者。
+
 <center>
 <img style="width: 64px" src="https://pp.myapp.com/ma_icon/0/icon_52654510_1737342498/256">
 </center>
